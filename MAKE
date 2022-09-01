@@ -1,0 +1,21 @@
+CC = python
+
+install: 
+    @echo "Installing Required Repositories..."
+    sudo apt-get install python3
+    sudo apt-get install python3-pygame
+
+shell: 
+    @echo "Starting Shell..."
+    {CC} './grv/shell.py'
+    @echo "Running Shell Input"
+    {CC} './grv/engine/engine.py' './grv/shell_out.grv'
+    {CC} './grv/bin/out.py'
+
+compile %.grv:
+    @echo "Compiling Source Code..."
+    python '/grv/engine/engine.py' $.grv
+
+run:
+    @echo "Starting Tetris"
+    ${CC} './grv/bin/out.py'

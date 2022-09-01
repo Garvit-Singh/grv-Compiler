@@ -1,0 +1,46 @@
+# Program to make your own custom Tetris Game
+
+console('Starting Tetris...');
+
+create_tetris__(300, 'Nimisha Tetris');
+
+score = 0;
+
+func get_score(cleared) { 
+    return cleared*(5); 
+}
+
+run = True;
+get_block__();
+while(run) {
+    if(block_fixed__()) {
+        get_block__();
+    }
+    if(lost_game__()) {
+        run = False;
+        end_game__();
+        break;
+    }
+
+    event = get_inputs__();
+    if(event == 'QUIT') {
+        run = False;
+        end_game__();
+        break;
+    } elif(event == 'K_LEFT') {
+        move_left__();
+    } elif(event == 'K_RIGHT') {
+        move_right__();
+    } elif(event == 'K_DOWN') {
+        move_down__();
+    } elif(event == 'K_UP') {
+        rotate__();
+    } else {
+        # console('Others');
+    }
+        render_game__();
+}
+
+cleared = rows_cleared__();
+score = get_score(cleared);
+console('Score: ', score);

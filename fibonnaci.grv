@@ -1,0 +1,18 @@
+# program to write all the fibonacci numbers from 1 to n
+
+func fibonacci(n) {
+    a = 1;
+    b = 1;
+    console(a, ' ', b, ' ', end=' ');
+
+    i = 0;
+    while(i<=n) {
+        c = a + b;
+        console(c, ' ', end=' ');
+        a = b;
+        b = c;
+        i = i+1;
+    }
+}
+
+fibonacci(10);
