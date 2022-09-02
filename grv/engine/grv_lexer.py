@@ -116,6 +116,10 @@ class GameLexer(Lexer):
     @_(DIV)
     def DIV(self, t):
         return Token(self.line_number, t.index, 'DIV', t.value)
+    MOD     = r'%'
+    @_(MOD)
+    def MOD(self, t):
+        return Token(self.line_number, t.index, 'MOD', t.value)
 
     # Comparision Operators
     EQ      = r'=='

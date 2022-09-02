@@ -38,7 +38,8 @@ while(run) {
     } else {
         # console('Others');
     }
-        render_game__();
+
+    render_game__();
 }
 
 cleared = rows_cleared__();

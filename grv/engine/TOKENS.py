@@ -8,6 +8,7 @@ TT_MUL = 'MUL'
 TT_DIV = 'DIV'
 TT_PLUS = 'PLUS'
 TT_MINUS = 'MINUS'
+TT_MOD = 'MOD'
 
 TT_GT = 'GT'
 TT_LT = 'LT'
@@ -26,13 +27,13 @@ class TokenTypes():
         self.token_dict = {
             TT_ID,
             TT_INT, TT_FLOAT, TT_STRING,
-            TT_MUL, TT_DIV, TT_PLUS, TT_MINUS,
+            TT_MUL, TT_DIV, TT_PLUS, TT_MINUS, TT_MOD,
             TT_GT, TT_LT, TT_GE, TT_LE, TT_EQ, TT_ASSIGN,
             TT_OR, TT_NOT, TT_AND
         }
 
         self.token_op = {
-            TT_MUL, TT_DIV, TT_PLUS, TT_MINUS,
+            TT_MUL, TT_DIV, TT_PLUS, TT_MINUS, TT_MOD,
             TT_GT, TT_LT, TT_GE, TT_LE, TT_EQ,
             TT_OR, TT_NOT, TT_AND
         }

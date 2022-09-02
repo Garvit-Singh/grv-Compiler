@@ -181,7 +181,7 @@ class Grid:
     
     # get new block once fixed and cleared rows
     def new_block(self, rotation, color, type):
-        self.current_block = Block(0, 5, rotation, color, type)
+        self.current_block = Block(0, 3, rotation, color, type)
         return
     
     # clear rows 

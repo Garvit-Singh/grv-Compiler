@@ -1,1 +1,1 @@
-console('My age is ', 20);
+i=5; while(i>0) { i = i-1; console(i); }
