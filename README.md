@@ -5,13 +5,21 @@ Compiler creates a single output file at a time, therefore, we can not run multi
 
 
 
+
+# Compilation Process / Stages of compilation 
+![Stages of Compilation](https://drive.google.com/uc?export=view&id=1sDQk0M-cWpvHkaNh_Mu1PHc-5Z4VVhXB)
+
+
+
+
 # Commands 
 
 ### Installation Command
 $ make install
 
 ### Compilation Command
-$ make compile [filename].grv
+$ make compile
+Choose file to compile: filename.grv
 
 ### Command to run code
 $ make run
@@ -29,13 +37,6 @@ $ make run
 
 
 
-
-# Compilation Process / Stages of compilation 
-![Stages of Compilation](https://drive.google.com/uc?export=view&id=1sDQk0M-cWpvHkaNh_Mu1PHc-5Z4VVhXB)
-
-
-
-
 # Language Shell
 (**Note**: This will take a line and override a pre-existing file which stores shell code, then run that file to do compile time check. We recommend using this for syntax checking. After running " *quit()* " in shell, shell will terminate and the latest copy of code will be ran for syntax checking.
 
@@ -46,7 +47,8 @@ $ make shell
 $ grv> console('Hello World!');
 $ grv> quit()
 
-
+### Preview 
+![Shell Output](https://drive.google.com/uc?export=view&id=1gK_sg8DQp2DbXX3oiW8yL5f9YLfECQmZ)
 
 
 # Language Syntax 
